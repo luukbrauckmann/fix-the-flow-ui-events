@@ -11,7 +11,7 @@
    box-sizing: border-box;
 }
 body{
-   margin: 2rem; 
+   margin: 2rem;
    padding: 0;
    font-family: "Open Sans", sans-serif;
    font-size: 2rem;
@@ -22,7 +22,7 @@ section{
    max-width: 90vw;
 }
 
-/* 
+/*
    Button dingen
 */
 a {
@@ -48,4 +48,30 @@ a:hover {
    background:var(--highlight-secondary);
    color:var(--secondary);
    border:var(--secondary);
+}
+
+fieldset {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	width: 300px;
+	padding: 0;
+	margin-bottom: 1rem;
+}
+
+fieldset > select {
+	padding: .4em .8em;
+	background:var(--secondary);
+	color: var(--highlight-primary);
+	border: 1px solid var(--highlight-primary);
+	border-radius: var(--pill);
+	transition: all .2s ease-in-out;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+fieldset > select:hover {
+	color:var(--highlight-secondary);
+	border-color: var(--highlight-secondary);
 }
