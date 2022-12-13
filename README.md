@@ -1,3 +1,5 @@
+Door middel van een select kun je selecteren welke evenst je wilt testen. Deze change in de input veranderd de event listener die blijft luisteren naar de geselecteerde event.
+
 ```
 colorButton = (event) => {
 	const { target } = event
@@ -9,7 +11,7 @@ var activeEvent = 'click'
 document.addEventListener(activeEvent, colorButton)
 
 const select = document.getElementById('events')
-select.addEventListener('change', (event) => {
+	select.addEventListener('change', (event) => {
 	document.removeEventListener(activeEvent, colorButton)
 	activeEvent = event.target.value
 	document.addEventListener(activeEvent, colorButton)
