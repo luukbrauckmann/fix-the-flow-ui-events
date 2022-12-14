@@ -76,26 +76,3 @@ button:hover {
 	border-color:  var(--highlight-primary);
 	color: var(--secondary);
 }
-
-#impossible-retry-button {
-	display: none;
-}
-
-#miss-msg {
-	padding: 0 1rem;
-	position: absolute;
-	text-align: center;
-	line-height: 4rem;
-	height: 4rem;
-	white-space: nowrap;
-	left: 50%;
-	top: 50%;
-	transform: translateY(-50%) translateX(-50%);
-	background-color: rgba(239, 68, 68, 0.04);
-	border-color: transparent;
-	color: #EF4444;
-	opacity: 0;
-	transition: opacity .2s ease-out;
-	cursor: initial;
-	width: 132.68px;
-}
