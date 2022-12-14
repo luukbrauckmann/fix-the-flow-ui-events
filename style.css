@@ -126,7 +126,7 @@ button:hover {
 	text-align: center;
 }
 
-@media (pointer: coarse) {
+@media (hover: none) and (pointer: coarse) {
   #modal {
 		display: flex;
 	}
