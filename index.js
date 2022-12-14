@@ -1,7 +1,6 @@
 var longpressed = false
 var timeout
 
-
 buttonIsLongPressed = () => {
 	console.log('Yes');
 }
@@ -12,5 +11,5 @@ button.addEventListener('mousedown', () => {
 })
 
 button.addEventListener('mouseup', () => {
-	timeout.clear
+	timeout.clear()
 })
