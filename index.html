@@ -8,14 +8,17 @@
 	<title>UI Events</title>
 	<link rel="stylesheet" href="style.css">
 
+	<script src="https://kit.fontawesome.com/f080495c91.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<header>
 		<h1>The Impossible Button</h1>
+		<small>Hint: Tab werkt niet</small>
 		<p>Miss counter <span id="miss-count">0</span></p>
 	</header>
 	<main>
+		<button id="miss-msg" tabindex="-1">Miss!</button>
 		<button id="impossible-button" tabindex="-1">Click me!</button>
 	</main>
 

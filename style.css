@@ -7,14 +7,18 @@
    --radius:.5rem;
    --pill: 2rem;
 }
+
 * {
    box-sizing: border-box;
 }
 
-html {
-	height: 100%;
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
-body{
+body {
    margin: 0;
    padding: 0;
    font-family: "Open Sans", sans-serif;
@@ -52,7 +56,7 @@ button {
 	border-radius: var(--pill);
 	font-weight: normal;
 	text-decoration: none;
-	transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
 	cursor: pointer;
 	font-size: 1.5rem;
 	text-align: center;
@@ -71,4 +75,27 @@ button:hover {
 	background: var(--highlight-primary);
 	border-color:  var(--highlight-primary);
 	color: var(--secondary);
+}
+
+#impossible-retry-button {
+	display: none;
+}
+
+#miss-msg {
+	padding: 0 1rem;
+	position: absolute;
+	text-align: center;
+	line-height: 4rem;
+	height: 4rem;
+	white-space: nowrap;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	background-color: rgba(239, 68, 68, 0.04);
+	border-color: transparent;
+	color: #EF4444;
+	opacity: 0;
+	transition: opacity .2s ease-out;
+	cursor: initial;
+	width: 132.68px;
 }
