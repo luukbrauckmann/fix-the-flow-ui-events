@@ -11,16 +11,19 @@
 	<script src="https://kit.fontawesome.com/f080495c91.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body tabindex="1">
 	<header>
 		<h1>The Impossible Button</h1>
-		<small>Hint: Tab werkt niet</small>
 		<p>Miss counter <span id="miss-count">0</span></p>
+		<small id="tab-message">Dacht je nou echt dat tab zou werken?</small>
 	</header>
 	<main>
 		<button id="miss-msg" tabindex="-1">Miss!</button>
 		<button id="impossible-button" tabindex="-1">Click me!</button>
 	</main>
+	<div id="modal">
+		<h1>Op een touch device is vals spelen</h1>
+	</div>
 
 	<script src="index.js"></script>
 </body>

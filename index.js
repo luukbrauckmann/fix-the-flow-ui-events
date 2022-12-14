@@ -5,7 +5,6 @@ missCounterElement.innerText = missCounter
 const button = document.getElementById('impossible-button')
 button.addEventListener('mouseover', (event) => {
 	const { target } = event
-	// console.log(window.innerHeight, window.innerWidth);
 
 	const missMsg = document.getElementById('miss-msg')
 	missMsg.style.transform = target.style.transform
@@ -21,13 +20,17 @@ button.addEventListener('mouseover', (event) => {
 	const newY = y ? eval(`${y} ${directionY} 100`) : eval(`0 ${directionY} 100`)
 	target.style.transform = `translateX(${newX}%) translateY(${newY}%)`
 
-	// const positionLeft = target.getBoundingClientRect().left
-	// const positionRight = target.getBoundingClientRect().top
-	// console.log(positionLeft < 0 && positionLeft > window.innerWidth);
-	// console.log(positionRight < 0 && positionRight > window.innerHeight);
-	// const buttonOutOfView = positionLeft < 0 && positionLeft > window.innerWidth || positionRight < 0 && positionRight > window.innerHeight
-	// if (buttonOutOfView) target.style.transform = `translateX(-50%) translateY(-50%)`
+	const buttonOutOfView = false
+	if (buttonOutOfView) target.style.transform = `translateX(-50%) translateY(-50%)`
 
 	missCounterElement.innerText = ++missCounter
 	localStorage.setItem('misscount', missCounter)
 })
+
+document.body.addEventListener('keydown', (event) => {
+	if (event.key === 'Tab') {
+		const message = document.getElementById('tab-message')
+		message.style.opacity = 1
+		setTimeout(() => message.style.opacity = 0, 3000);
+	}
+});

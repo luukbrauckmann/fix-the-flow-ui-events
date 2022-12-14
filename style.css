@@ -99,3 +99,35 @@ button:hover {
 	cursor: initial;
 	width: 132.68px;
 }
+
+#tab-message {
+	padding: 1rem;
+	background: rgba(239, 68, 68, 0.04);
+	color: #EF4444;
+	opacity: 0;
+	border-radius: 50%;
+	transition: opacity .2s ease-in-out;
+}
+
+#modal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999999;
+	background-color: rgba(0, 0, 0, .4);
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+#modal > h1 {
+	text-align: center;
+}
+
+@media (hover: none) {
+  #modal {
+		display: flex;
+	}
+}
