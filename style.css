@@ -10,74 +10,65 @@
 * {
    box-sizing: border-box;
 }
+
+html {
+	height: 100%;
+}
 body{
-   margin: 2rem;
+   margin: 0;
    padding: 0;
    font-family: "Open Sans", sans-serif;
-   font-size: 2rem;
    background: var(--secondary);
    color: var(--primary);
 }
 
-h4 {
-	font-weight: normal;
-	margin-bottom: .5rem;
-}
-
-section{
-   max-width: 90vw;
-}
-
-/*
-   Button dingen
-*/
-a {
-   display: inline-block;
-   margin: .2em;
-   padding: .4em 0.8em;
-   background:var(--secondary);
-   color: var(--highlight-primary);
-   border: 1px solid var(--highlight-primary);
-   border-radius: var(--pill);
-   font-weight: normal;
-   text-decoration: none;
-   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-a:hover {
-   transform: scale(0.8);
-   /* margin: 1rem; */
- }
- a:focus {
-   transform: scale(1);
- }
-.purple{
-   background:var(--highlight-secondary);
-   color:var(--secondary);
-   border:var(--secondary);
-}
-
-fieldset {
-	border: none;
+body{
 	display: flex;
-	flex-direction: column;
-	gap: .5em;
-	width: 300px;
-	padding: 0;
-	margin-bottom: 1rem;
+	flex-flow: column;
+	gap: .5rem;
+	height: 100%;
 }
 
-fieldset > select {
-	padding: .4em .8em;
+body > header,
+body > footer {
+	flex: 0 1 auto;
+}
+
+body > header {
+	text-align: center;
+}
+
+body > main {
+	padding: 0 var(--spacing);
+	flex: 1 1 auto;
+	position: relative;
+}
+
+button {
+	padding: 0 1rem;
 	background:var(--secondary);
 	color: var(--highlight-primary);
 	border: 1px solid var(--highlight-primary);
 	border-radius: var(--pill);
-	transition: all .2s ease-in-out;
-	font-size: 1em;
+	font-weight: normal;
+	text-decoration: none;
+	transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 	cursor: pointer;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 4rem;
+	height: 4rem;
+	white-space: nowrap;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform: translateY(-50%) translateX(-50%);
 }
 
-fieldset > select:hover {
-	color:var(--highlight-secondary);
-	border-color: var(--highlight-secondary);
+button:hover {
+	background: var(--highlight-primary);
+	border-color:  var(--highlight-primary);
+	color: var(--secondary);
 }
