@@ -13,4 +13,3 @@ select.addEventListener('change', (event) => {
 	activeEvent = event.target.value
 	document.addEventListener(activeEvent, colorButton)
 })
-
