@@ -67,6 +67,7 @@ button {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	user-select: none;
 
 	transform: translateY(-50%) translateX(-50%);
 }
@@ -98,7 +99,6 @@ button:hover {
 	transition: opacity .2s ease-out;
 	cursor: initial;
 	width: 132.68px;
-	user-select: none;
 }
 
 #tab-message {
