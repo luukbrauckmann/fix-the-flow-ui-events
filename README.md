@@ -1,4 +1,5 @@
 # Main branch
+Probeer de knop in te drukken. De knop schiet telkens wanneer je eroverheen hovert een random kant op. Tab & modiel is allebij geblokkeerd, want dat is vals spelen. Er is geen afhandeling voor een button klik, want welke impossible button is nou echt daadwerkelijk te klikken?
 ```js
 let missCounter = +localStorage.getItem('misscount') || 0
 const missCounterElement = document.getElementById('miss-count')
@@ -69,6 +70,27 @@ const select = document.getElementById('events')
 })
 ```
 # Longpress branch
+Houdt de button ingedrukt voor 2 seconden
 ```js
+var longpressed = false
+var timeout
 
+buttonIsLongPressed = () => {
+	console.log('Yes');
+}
+
+/**
+* Eventlistener to detect button press
+*/
+const button = document.getElementById('longpress-button')
+button.addEventListener('mousedown', () => {
+	timeout = setTimeout(buttonIsLongPressed, 2000)
+})
+
+/**
+* Eventlistener to detect button release
+*/
+button.addEventListener('mouseup', () => {
+	timeout.clear()
+})
 ```
