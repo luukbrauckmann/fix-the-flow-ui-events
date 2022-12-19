@@ -1,3 +1,4 @@
+# Main branch
 ```js
 let missCounter = +localStorage.getItem('misscount') || 0
 const missCounterElement = document.getElementById('miss-count')
@@ -47,7 +48,7 @@ document.body.addEventListener('keydown', (event) => {
 	}
 })
 ```
-
+# Legacy branch
 Door middel van een select kun je selecteren welke evenst je wilt testen. Deze change in de input veranderd de event listener die blijft luisteren naar de geselecteerde event. Door een knop te activeren met de geselecteerde event wordt het gekleurd en na 2 secondes weer terug gezet.
 
 ```js
@@ -66,4 +67,8 @@ const select = document.getElementById('events')
 	activeEvent = event.target.value
 	document.addEventListener(activeEvent, colorButton)
 })
+```
+# Longpress branch
+```js
+
 ```
